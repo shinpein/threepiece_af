@@ -26,7 +26,7 @@ export const actions = {
     login_pass
   }) {
     try {
-      const data = await this.$axios.$get(`https://shopping.body-custom.net/api/getAffiliateLogin.php?login_id=${login_id}&login_pass=${login_pass}`);
+      const data = await this.$axios.$get(`/api/getAffiliateLogin.php?login_id=${login_id}&login_pass=${login_pass}`);
       if (!data.argument_id) {
         throw new Error("ログインIDまたはパスワードが違います")
       }
